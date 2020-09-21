@@ -1,0 +1,26 @@
+{
+  "name": "victoriya_zasimenko_inner_group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prettier": "prettier --write **/*.js",
+    "eslint--fix": "eslint --fix **/*.js",
+    "eslint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.epam.com/victoriya_zasimenko/victoriya_zasimenko_inner_group.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "jest": "^26.4.2",
+    "prettier": "2.1.2"
+  }
+}
