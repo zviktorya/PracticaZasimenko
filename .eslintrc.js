@@ -14,4 +14,14 @@ module.exports = {
   },
   rules: {
   },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 };
