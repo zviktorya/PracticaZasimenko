@@ -62,10 +62,13 @@ function getCombineDate(...array) {
                 for(let i = 0; i < value.length; i+=1) {
                     result += `${i}: ${value[i]}, `;
                 }
-            } else if (typeof value === 'object') {
-                value.forEach((key)=> {
-                    result += `${key}: ${value[key]}, `
-                })                 
+            } else if (typeof value === 'object') {   
+                const objectKeys = Object.keys(value);             
+                objectKeys.forEach((key)=> {
+                    if (value.hasOwnProperty(key)) {                                   
+                        result += `${key}: ${value[key]}, `;
+                    }
+                } )                
             }
         })
         result = result.slice(0, -2);
