@@ -13,6 +13,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-prototype-builtins': 'off'
   },
   "overrides": [
     {
