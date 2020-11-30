@@ -1,10 +1,12 @@
+/* eslint-disable max-classes-per-file, class-methods-use-this, no-param-reassign */
 class Base {
     constructor(name) {
         this.name = name;
         this.points = 100;
     }
+
     randomInteger(min, max) {
-        let rand = min + Math.random() * (max + 1 - min);
+        const rand = min + Math.random() * (max + 1 - min);
         return Math.floor(rand);
     }
 }
@@ -16,6 +18,7 @@ class Warrior extends Base {
         this.minAttakPower = this.randomInteger(1, 20);
         this.maxAttakPower = this.randomInteger(20, 40);
     }
+
     toAttack(person) {
         person.points -= this.randomInteger(10, 100);
     }
@@ -28,6 +31,7 @@ class Monster extends Base {
         this.minAttakPower = this.randomInteger(1, 20);
         this.maxAttakPower = this.randomInteger(20, 40);
     }
+
     toAttack(person) {
         person.points -= this.randomInteger(10, 100);
     }
@@ -40,14 +44,15 @@ class Healer extends Base {
         this.minHealingPower = this.randomInteger(1, 20);
         this.maxHealingPower = this.randomInteger(20, 40);
     }
+
     toHeal(person) {
         person.points += this.randomInteger(10, 100);
     }
 }
 
-var warrior = new Warrior('spider');
-var monster = new Monster('halk');
-var healer = new Healer('komar');
+const warrior = new Warrior('spider');
+const monster = new Monster('halk');
+const healer = new Healer('komar');
 
 console.log(warrior.points)
 console.log(monster.points)
